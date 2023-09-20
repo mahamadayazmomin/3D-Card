@@ -18,7 +18,7 @@
   
   .card {
     width: var(--card-width);
-    height: 100%;
+    height: var(--card-height);
     position: relative;
     display: flex;
     justify-content: center;
@@ -37,8 +37,7 @@
   .wrapper {
     transition: all 0.5s;
     position: absolute;
-    width: 200%;
-    height: 100%;
+    width: 100%;
     z-index: -1;
   }
   
@@ -89,7 +88,7 @@
     height: 120px;
   }
   .title {
-    width: 200%;
+    width: 100%;
     transition: transform 0.5s;
   }
   .card:hover .title {
@@ -98,7 +97,6 @@
   
   .character {
     width: 100%;
-    height: 100%;
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
@@ -109,3 +107,11 @@
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
   }
+
+@media screen and (min-width: 300px) and (max-width: 1024px){
+    .card{
+      height: 60%;
+      width: 50%;
+      align-content: center;
+    }
+}
